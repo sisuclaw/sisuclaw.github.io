@@ -133,14 +133,14 @@
 }
 
 .back-link a {
-    color: var(--accent-blue);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .back-link a:hover {
-    color: var(--accent-gold);
+    color: var(--accent-blue);
 }
 
 .related-posts {
@@ -148,7 +148,8 @@
 }
 
 .related-posts h3 {
-    color: var(--accent-blue);
+    color: var(--text-primary);
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
@@ -162,7 +163,7 @@
 }
 
 .related-posts a {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
