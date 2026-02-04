@@ -367,6 +367,58 @@ footer a:hover {
     color: var(--text-secondary);
 }
 
+/* Hamburger Menu */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 0.8rem 20px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    color: var(--accent-blue);
+    border-left-color: var(--accent-blue);
+    background: var(--bg-primary);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .site-title {
@@ -381,7 +433,27 @@ footer a:hover {
         padding: 1.5rem;
     }
 
-    .main-nav {
-        gap: 1rem;
+    /* Hide desktop nav */
+    .top-bar .main-nav {
+        display: none;
+    }
+
+    /* Show hamburger button */
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* Adjust header for hamburger */
+    .top-bar {
+        justify-content: space-between;
+    }
+
+    /* Make header relative for mobile menu positioning */
+    header {
+        position: relative;
+    }
+
+    .header-content {
+        position: relative;
     }
 }
